@@ -1,5 +1,5 @@
-# Be.Luck Forwarding — allow all crawlers
+# Cargomap — allow all crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://beluck-trans.github.io/sitemap.xml
+Sitemap: https://cargomap.github.io/sitemap.xml
