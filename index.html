@@ -149,7 +149,7 @@
       "name": "How do I get a quote?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Message me on WhatsApp or WeChat at +86 186 7641 9641, or email lawcantonese@outlook.com. Tell me what you are shipping, from where, and to which port, and I will reply with a straight answer."
+        "text": "The fastest way is email: send your loading port, destination port, cargo-ready date, commodity and HS code, gross weight, and whether the goods include anything dangerous, battery or liquid. I am reachable across time zones and will reply with a straight, honest answer."
       }
     }
   ]
@@ -409,6 +409,16 @@
   .faq-item[open] .faq-chev{transform:rotate(180deg);}
   .faq-a{padding:0 4px 24px;max-width:64ch;}
   .faq-a p{color:var(--muted);font-size:17px;margin:0;}
+
+  /* ===== v2: coverage / enquiry / wechat / footer note ===== */
+  .coverage{border-top:1px solid var(--line);padding:42px 0;}
+  .cov-line{max-width:72ch;font-size:clamp(16px,1.8vw,19px);line-height:1.65;color:var(--ink);margin:0;}
+  .cov-lead{color:var(--brass);font-weight:600;}
+  .cov-em{color:var(--teal-2);}
+  .contact-card .btn-brass{margin-top:24px;}
+  .enq-hint{font-size:13.5px;color:var(--muted);line-height:1.6;margin:14px 0 0;max-width:54ch;}
+  .chan.info{cursor:default;}
+  .foot-note{flex-basis:100%;width:100%;font-size:12px;line-height:1.6;color:var(--muted);opacity:.8;margin:20px 0 12px;}
 </style>
 </head>
 <body>
@@ -446,8 +456,8 @@
   <div class="hero-grid">
     <div class="hero-text">
       <div class="eyebrow">FOB Nominated Forwarder · South China</div>
-      <h1>Your eyes and hands <em>at origin</em> in China.</h1>
-      <p class="lede">Ocean freight from China to Vietnam and Iraq, handled by one person who treats your shipment like his own. FCL, FOB nominee, and door delivery.</p>
+      <h1>Trusting a stranger with your cargo <em>is the hard part.</em></h1>
+      <p class="lede">So I lead with the truth. I'm Bob Law, a freight forwarder in South China — I'll tell you plainly what I handle, what I don't, and exactly where your shipment stands. Ocean freight to Vietnam and Iraq, and across Asia, the Middle East and Europe.</p>
       <div class="hero-routes">
         <span class="route route--ondark"><svg width="20" height="16" viewBox="0 0 20 16" color="#D89149"><use href="#glyph"/></svg> CN&nbsp;→&nbsp;VN <span class="dest">Hai Phong · Ho Chi Minh</span></span>
         <span class="route route--ondark"><svg width="20" height="16" viewBox="0 0 20 16" color="#D89149"><use href="#glyph"/></svg> CN&nbsp;→&nbsp;IQ <span class="dest">Umm Qasr</span></span>
@@ -531,6 +541,13 @@
   </div>
 </section>
 
+<!-- COVERAGE -->
+<section class="coverage">
+  <div class="wrap reveal">
+    <p class="cov-line"><span class="cov-lead">Beyond these two lanes,</span> I also arrange ocean freight across Southeast &amp; Northeast Asia <span class="cov-em">(including Japan)</span>, Australia &amp; New Zealand, Europe, the Mediterranean and the wider Middle East. Two corridors I know deeply; many more I can move for you — just ask.</p>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about" class="about">
   <div class="wrap">
@@ -553,6 +570,7 @@
         <div class="kicker">Who you'll be talking to</div>
         <h2>You reach me — not a call center.</h2>
         <p>I'm <strong>Bob Law</strong>, an ocean freight forwarder based in the Pearl River Delta in South China. I work the two lanes I know best — China to Vietnam and China to Iraq — instead of claiming to cover the whole world.</p>
+        <p>You've probably met forwarders who hide what they are: palming business cards at trade shows, almost afraid to say the word. I'd rather stand up straight, tell you exactly what I do, and let you decide. If I'm not the right fit, you'll know quickly — and that honesty is the whole point of this page.</p>
         <p>When you message me, you get me. I look after the parts of a shipment an overseas buyer can't see from far away: the supplier, the port, the paperwork, the transshipment. Most of the job is noticing problems early and telling you the truth about them.</p>
         <p>Outside work I photograph the places I walk through — nearly every image on this page is mine. I think the same habit of paying attention is what makes someone good at this work.</p>
       </div>
@@ -1702,7 +1720,7 @@
       </details>
       <details class="faq-item">
         <summary><span class="faq-q">How do I get a quote?</span><svg class="faq-chev" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>Message me on WhatsApp or WeChat at +86 186 7641 9641, or email lawcantonese@outlook.com. Tell me what you are shipping, from where, and to which port, and I will reply with a straight answer.</p></div>
+        <div class="faq-a"><p>The fastest way is email: send your loading port, destination port, cargo-ready date, commodity and HS code, gross weight, and whether the goods include anything dangerous, battery or liquid. I am reachable across time zones and will reply with a straight, honest answer.</p></div>
       </details>
     </div>
   </div>
@@ -1715,21 +1733,27 @@
       <div>
         <div class="kicker" style="color:var(--brass-2)">Get in touch</div>
         <h2>Let's talk about your shipment.</h2>
-        <p class="lede">Tell me what you're shipping, from where, to which port. I'll reply with a straight answer — usually within a few hours, your time zone.</p>
+        <p class="lede">Reachable around the clock, across time zones — message me any time and you'll get a straight, honest answer, never a sales script.</p>
+        <a class="btn btn-brass" href="mailto:lawcantonese@outlook.com?subject=Shipping%20enquiry&body=Hi%20Bob%2C%0A%0AI%27d%20like%20a%20first%20look%20at%20shipping%20the%20following%3A%0A%0A-%20Port%20of%20loading%20%28POL%29%3A%20%0A-%20Port%20of%20discharge%20%28POD%29%3A%20%0A-%20Cargo%20ready%20date%3A%20%0A-%20Commodity%20%26%20HS%20code%3A%20%0A-%20Gross%20weight%3A%20%0A-%20Any%20dangerous%20/%20battery%20/%20liquid%20goods%3F%20%28Y/N%29%3A%20%0A%0AThanks%2C">Start an enquiry by email</a>
+        <p class="enq-hint">Have these ready and I can take a first look: loading port, destination port, cargo-ready date, commodity &amp; HS code, gross weight, and whether anything is dangerous / battery / liquid.</p>
       </div>
       <div class="channels">
-        <a class="chan" href="https://wa.me/8618676419641?text=Hi%20Bob%2C%20I%27d%20like%20to%20ask%20about%20shipping%20from%20China." target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2Zm5.3 14.1c-.22.62-1.3 1.2-1.8 1.24-.46.05-1.05.07-1.7-.1a14 14 0 0 1-1.54-.57 11 11 0 0 1-4.2-3.7c-.3-.4-.95-1.27-.95-2.42 0-1.15.6-1.72.82-1.95a.86.86 0 0 1 .62-.29l.45.01c.14 0 .34-.05.53.4l.74 1.8c.06.13.1.28.01.45l-.28.45c-.1.13-.21.3-.3.4-.1.1-.2.22-.09.43.12.2.53.87 1.13 1.4.78.7 1.43.92 1.63 1.02.2.1.32.09.44-.05l.62-.72c.16-.2.3-.16.5-.09l1.74.82c.2.1.34.14.4.22.05.1.05.5-.17 1.12Z"/></svg>
-          <div><span class="lab">WhatsApp &amp; WeChat</span><div class="val">+86 186 7641 9641</div></div>
-        </a>
         <a class="chan" href="mailto:lawcantonese@outlook.com?subject=Shipping%20enquiry">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <div><span class="lab">Email</span><div class="val">lawcantonese@outlook.com</div></div>
+          <div><span class="lab">Email · best for enquiries</span><div class="val">lawcantonese@outlook.com</div></div>
         </a>
         <a class="chan" href="https://www.linkedin.com/in/bob-law-3bba48403" target="_blank" rel="noopener">
           <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9V9Z"/></svg>
-          <div><span class="lab">LinkedIn</span><div class="val">in/bob-law</div></div>
+          <div><span class="lab">LinkedIn · follow my field notes</span><div class="val">in/bob-law</div></div>
         </a>
+        <a class="chan" href="https://wa.me/8618676419641?text=Hi%20Bob%2C%20I%27d%20like%20to%20ask%20about%20shipping%20from%20China." target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2Zm5.3 14.1c-.22.62-1.3 1.2-1.8 1.24-.46.05-1.05.07-1.7-.1a14 14 0 0 1-1.54-.57 11 11 0 0 1-4.2-3.7c-.3-.4-.95-1.27-.95-2.42 0-1.15.6-1.72.82-1.95a.86.86 0 0 1 .62-.29l.45.01c.14 0 .34-.05.53.4l.74 1.8c.06.13.1.28.01.45l-.28.45c-.1.13-.21.3-.3.4-.1.1-.2.22-.09.43.12.2.53.87 1.13 1.4.78.7 1.43.92 1.63 1.02.2.1.32.09.44-.05l.62-.72c.16-.2.3-.16.5-.09l1.74.82c.2.1.34.14.4.22.05.1.05.5-.17 1.12Z"/></svg>
+          <div><span class="lab">WhatsApp</span><div class="val">+86 186 7641 9641</div></div>
+        </a>
+        <div class="chan info">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C5.36 4 2 6.86 2 10.39c0 2.02 1.1 3.82 2.84 5.02L4 18l2.74-1.27c.86.24 1.78.37 2.76.37.27 0 .54-.01.8-.04a5.3 5.3 0 0 1-.3-1.74c0-3.06 2.96-5.46 6.5-5.46.28 0 .56.02.83.05C16.66 6.6 13.41 4 9.5 4Z"/><path d="M22 15.04c0-2.6-2.55-4.71-5.7-4.71-3.15 0-5.7 2.11-5.7 4.71 0 2.61 2.55 4.72 5.7 4.72.7 0 1.36-.1 1.97-.29L20 20.5l-.5-1.67c1.52-.86 2.5-2.24 2.5-3.79Z"/></svg>
+          <div><span class="lab">WeChat · add by phone number</span><div class="val">+86 186 7641 9641</div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1745,6 +1769,7 @@
       <span class="route route--ondark"><svg width="20" height="16" viewBox="0 0 20 16" color="#D89149"><use href="#glyph"/></svg> CN&nbsp;→&nbsp;VN</span>
       <span class="route route--ondark"><svg width="20" height="16" viewBox="0 0 20 16" color="#D89149"><use href="#glyph"/></svg> CN&nbsp;→&nbsp;IQ</span>
     </div>
+    <p class="foot-note">Cargomap is the personal professional page of Bob Law, who works in ocean freight forwarding. It is a personal brand — not a registered company — and does not itself contract carriage or issue bills of lading. Field notes are general information, not a binding quote or legal advice; any service is governed by a separate formal agreement. Information you send by email is used only to reply to your enquiry and is never sold or shared.</p>
     <small>Bob Law · Pearl River Delta, South China · © 2026</small>
   </div>
 </footer>
