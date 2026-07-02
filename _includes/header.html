@@ -1,4 +1,4 @@
-<header id="hdr">
+<header id="hdr"{% unless page.url == "/" %} class="solid" data-solid="always"{% endunless %}>
   <div class="wrap nav">
     <a href="/" class="brand">
       <svg class="mark" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
@@ -15,7 +15,6 @@
       <a href="/iraq/"{% if page.url == "/iraq/" %} class="active" aria-current="page"{% endif %}>Iraq</a>
       <a href="/gulf/"{% if page.url == "/gulf/" %} class="active" aria-current="page"{% endif %}>Gulf</a>
       <a href="/southeast-asia/"{% if page.url == "/southeast-asia/" %} class="active" aria-current="page"{% endif %}>SE&nbsp;Asia</a>
-      <a href="/services/"{% if page.url == "/services/" %} class="active" aria-current="page"{% endif %}>Services</a>
       <a href="/about/"{% if page.url == "/about/" %} class="active" aria-current="page"{% endif %}>About</a>
       <a href="/field-notes/"{% if page.url == "/field-notes/" %} class="active" aria-current="page"{% endif %}>Notes</a>
       <a href="/faq/"{% if page.url == "/faq/" %} class="active" aria-current="page"{% endif %}>FAQ</a>

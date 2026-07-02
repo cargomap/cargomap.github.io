@@ -56,26 +56,6 @@
 </script>
 {% endif %}
 
-<script>
-(function(){
-  document.documentElement.style.visibility='hidden';
-  fetch('https://ipapi.co/json/')
-    .then(function(r){return r.json();})
-    .then(function(d){
-      if(d.country_code==='CN'){
-        document.documentElement.style.visibility='visible';
-        document.open();
-        document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>403 Forbidden</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:monospace}.w{text-align:center;color:#555}.c{font-size:56px;font-weight:700;color:#222;letter-spacing:6px}.m{margin-top:14px;font-size:13px;letter-spacing:3px;text-transform:uppercase}</style></head><body><div class="w"><div class="c">403</div><div class="m">Forbidden</div></div></body></html>');
-        document.close();
-      } else {
-        document.documentElement.style.visibility='visible';
-      }
-    })
-    .catch(function(){
-      document.documentElement.style.visibility='visible';
-    });
-})();
-</script>
 </head>
 <body>
 
@@ -104,5 +84,24 @@
 {% include footer.html %}
 
 <script src="/assets/js/main.js"></script>
+<script>
+(function(){
+  var ctrl = ('AbortController' in window) ? new AbortController() : null;
+  var t = ctrl ? setTimeout(function(){ ctrl.abort(); }, 3000) : null;
+  fetch('https://ipapi.co/json/', ctrl ? { signal: ctrl.signal } : {})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (t) clearTimeout(t);
+      if (d && d.country_code === 'CN') {
+        document.body.innerHTML =
+          '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:monospace;color:#555;text-align:center">' +
+          '<div><div style="font-size:56px;font-weight:700;color:#222;letter-spacing:6px">403</div>' +
+          '<div style="margin-top:14px;font-size:13px;letter-spacing:3px;text-transform:uppercase">Forbidden</div></div></div>';
+        document.title = '403 Forbidden';
+      }
+    })
+    .catch(function(){ if (t) clearTimeout(t); /* fail-open */ });
+})();
+</script>
 </body>
 </html>
