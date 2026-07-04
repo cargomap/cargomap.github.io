@@ -59,14 +59,18 @@
   }
 
   function showBlockScreen() {
+    document.title = '403 ERROR';
     document.body.innerHTML =
-      '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;' +
-      'background:var(--deep,#0B3B3E);color:var(--light,#F2ECE1);font-family:\'Mulish\',sans-serif;' +
-      'text-align:center;padding:32px;box-sizing:border-box;">' +
-      '<div style="max-width:440px;">' +
-      '<p style="font-size:17px;line-height:1.7;margin:0;">此網站的內容目前不對中國大陸地區公開顯示。</p>' +
-      '<p style="font-size:14px;line-height:1.7;margin:14px 0 0;opacity:.75;">This site\'s content is not currently displayed for mainland China visitors.</p>' +
-      '</div></div>';
+      '<div style="min-height:100vh;background:#fff;color:#1a1a1a;' +
+      'font-family:Georgia,\'Times New Roman\',serif;padding:56px 64px;box-sizing:border-box;">' +
+      '<h1 style="font-size:40px;font-weight:700;margin:0 0 28px;">403 ERROR</h1>' +
+      '<p style="font-size:19px;font-weight:700;margin:0 0 20px;">The request could not be satisfied.</p>' +
+      '<hr style="border:none;border-top:1px solid #ccc;margin:0 0 20px;">' +
+      '<p style="font-size:15px;line-height:1.7;max-width:760px;margin:0 0 20px;">' +
+      'An unexpected error occurred while processing this request. Please try again later, or contact the site owner if the problem persists.</p>' +
+      '<hr style="border:none;border-top:1px solid #ccc;margin:0 0 20px;">' +
+      '<p style="font-family:\'Courier New\',monospace;font-size:13px;color:#555;margin:0;">Error reference: ' + Date.now().toString(36) + '</p>' +
+      '</div>';
   }
 
   tryServices(0);
