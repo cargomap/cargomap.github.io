@@ -84,24 +84,6 @@
 {% include footer.html %}
 
 <script src="/assets/js/main.js"></script>
-<script>
-(function(){
-  var ctrl = ('AbortController' in window) ? new AbortController() : null;
-  var t = ctrl ? setTimeout(function(){ ctrl.abort(); }, 3000) : null;
-  fetch('https://ipapi.co/json/', ctrl ? { signal: ctrl.signal } : {})
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      if (t) clearTimeout(t);
-      if (d && d.country_code === 'CN') {
-        document.body.innerHTML =
-          '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:monospace;color:#555;text-align:center">' +
-          '<div><div style="font-size:56px;font-weight:700;color:#222;letter-spacing:6px">403</div>' +
-          '<div style="margin-top:14px;font-size:13px;letter-spacing:3px;text-transform:uppercase">Forbidden</div></div></div>';
-        document.title = '403 Forbidden';
-      }
-    })
-    .catch(function(){ if (t) clearTimeout(t); /* fail-open */ });
-})();
-</script>
+<script src="/assets/js/geo-block.js"></script>
 </body>
 </html>
